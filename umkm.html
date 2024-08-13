@@ -1,0 +1,943 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" />
+    <title>UMKM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        padding-top: 60px;
+        overflow-x: hidden;
+        backdrop-filter: 10px;
+      }
+
+      /* About us */
+      .about-main .about-desc {
+        width: 100%;
+        font-size: 1rem;
+        text-align: justify;
+        margin: 0;
+        display: block;
+        text-indent: 20px;
+      }
+      .about-main img {
+        height: 430px;
+        object-fit: cover;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        display: flex;
+      }
+
+      .nav-link {
+        display: inline-block;
+        margin: 20px;
+        position: relative;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        font-family: Comic Sans MS;
+      }
+      .nav-pills .nav-link:active {
+        background-color: black;
+        color: lime;
+      }
+      .nav-link:hover,
+      .nav-link:active {
+        color: lime;
+        background-color: rgb(0, 0, 0, 0.7);
+      }
+      .nav-pills:hover,
+      .nav-link:active {
+        color: lime;
+      }
+
+      /* Carousel */
+      .carousel {
+        width: 100%;
+      }
+
+      .carousel-inner img {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        object-fit: cover;
+      }
+      /*galery*/
+
+      .polaroid {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+        background: #fff;
+        border: 10px solid #fff;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .polaroid img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .caption {
+        padding: 10px;
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #333;
+      }
+
+      /* Nav-tabs */
+      .nav-tabs {
+        margin-bottom: 0;
+      }
+
+      .nav-tabs .nav-link {
+        border: 1px solid transparent;
+        border-radius: 0;
+      }
+
+      .nav-tabs .nav-link.active {
+        border-color: #dee2e6 #dee2e6 #fff;
+      }
+
+      .tab-pane {
+        display: none;
+      }
+
+      .tab-pane.active {
+        display: block;
+      }
+
+      .menu-item img {
+        width: 100%;
+        height: auto;
+      }
+
+      .menu img {
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .menu-item h5 {
+        margin-top: 10px;
+      }
+
+      .desc {
+        font-size: 1rem;
+      }
+      /**/
+      card .card .card-body {
+        /* Initial card shadow */
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s ease-in-out; /* Smooth transition effect */
+        border-radius: 0.25rem; /* Optional: Adds rounded corners */
+      }
+
+      .card:hover {
+        /* Shadow effect on hover */
+        box-shadow: 0 10px 14px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Ensuring the card image remains circular and centered */
+      .img-fluid {
+        width: 100px; /* Adjust size as necessary */
+        height: 100px; /* Match width for perfect circle */
+        object-fit: cover;
+        display: block;
+        margin: 0 auto; /* Center image */
+        border-radius: 50%; /* Ensure circular shape */
+        border: 5px solid #fff; /* White border around the image */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: slight shadow for the image */
+      }
+
+      /* Additional styling for card content */
+      .card-body {
+        text-align: center;
+      }
+
+      .blockquote {
+        font-style: italic;
+        color: #555; /* Text color for blockquote */
+      }
+      .quote {
+        font-size: 10px;
+      }
+      /**/
+      FAQ .faq-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .accordion {
+        max-height: 400px;
+        overflow-y: auto;
+      }
+      .img {
+        max-width: 100%; /* Adjust size to be larger */
+        height: auto;
+      }
+      .FAQ img {
+        max-width: 100%; /* Adjust size to be larger */
+        height: auto;
+      }
+      #FAQ {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      /* Ensure image is responsive and centered */
+      #FAQ .col-lg-6 img {
+        max-width: 100%;
+        height: auto;
+      }
+      /* Footer */
+      .footer {
+        background-color: #343a40;
+        color: white;
+        padding: 40px 0;
+      }
+
+      .footer a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        color: #ffc107;
+        border-radius: 10px;
+      }
+
+      .footer .footer-about .sitename {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .footer .social-links a {
+        margin-right: 15px;
+        color: white;
+      }
+
+      .footer .social-links a:hover {
+        color: #ffc107;
+      }
+
+      .footer .footer-newsletter input[type='email'] {
+        width: calc(100% - 100px);
+        padding: 10px;
+        border: none;
+        border-radius: 5px 0 0 5px;
+        margin-right: -4px;
+      }
+
+      .footer .footer-newsletter input[type='submit'] {
+        padding: 10px;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        background-color: #ffc107;
+        color: black;
+        cursor: pointer;
+      }
+
+      .footer .footer-newsletter input[type='submit']:hover {
+        background-color: #e0a800;
+      }
+
+      .footer .copyright {
+        margin-top: 30px;
+      }
+      /*parallax*/
+      .parallax {
+        background-image: url('image/banner.png');
+        height: 100%;
+        width: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 500px;
+      }
+      /* Responsive styles */
+      @media (max-width: 575px) {
+        .desc {
+          font-size: 10px;
+        }
+        .nav-tabs {
+          flex-wrap: wrap;
+          justify-content: space-around;
+          border-bottom: none;
+        }
+
+        .nav-tabs .nav-item {
+          flex-grow: 1;
+          text-align: center;
+          margin-bottom: 5px;
+        }
+
+        .nav-tabs .nav-link {
+          font-size: 0.9rem;
+          border-radius: 5px;
+          margin: 0 5px;
+          padding: 10px;
+          border: 1px solid #dee2e6;
+          background-color: #f8f9fa;
+        }
+
+        .nav-tabs .nav-link.active {
+          background-color: #ffffff;
+          border-color: #ddd;
+        }
+        .faq-image {
+          max-height: 200px; /* Adjust max height for small phones */
+        }
+
+        .accordion {
+          max-height: 200px;
+        }
+        .parallax {
+          background-image: url('image/banner.png');
+          height: 100%;
+          width: 100%;
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .navbar-nav {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          text-align: right;
+          font-size: 20px;
+        }
+
+        .nav-link {
+          margin: 10px 20px;
+        }
+
+        .desc {
+          font-size: 10px;
+        }
+        .faq-image {
+          max-height: 250px; /* Adjust max height for large phones */
+        }
+
+        .accordion {
+          max-height: 250px;
+        }
+        #FAQ {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        #FAQ .col-lg-6 {
+          text-align: center;
+        }
+
+        #FAQ .col-lg-6 img {
+          max-width: 90%;
+        }
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .col-md-6,
+        .col-md-4 {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        .parallax {
+          background-attachment: scroll; /* Disable parallax for mobile devices */
+        }
+        .parallax {
+          background-image: url('image/banner.png');
+          height: 100%;
+          width: 100%;
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          margin-bottom: 30px;
+        }
+      }
+
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .navbar-nav {
+          display: flex;
+          justify-content: space-around;
+          width: 100%;
+        }
+
+        .nav-link {
+          margin: 10px 15px;
+        }
+        .faq-image {
+          max-height: 300px; /* Adjust max height for tablets */
+        }
+
+        .accordion {
+          max-height: 300px;
+        }
+        .desc {
+          font-size: 10px;
+        }
+        #FAQ {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        #FAQ .col-lg-6 {
+          text-align: center;
+        }
+
+        #FAQ .col-lg-6 img {
+          max-width: 90%;
+        }
+        .col-md-6 {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+
+        .col-md-4 {
+          flex: 0 0 33.3333%;
+          max-width: 33.3333%;
+        }
+        .col-md-6,
+        .col-lg-4 {
+          flex: 0 0 auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar-example" class="navbar navbar-expand-lg" style="position: fixed; z-index: 1030; top: 0; right: 0; left: 0; background-color: #343a40">
+      <div class="container-fluid">
+        <img src="assets/logo1" alt="" />
+        <button
+          class="navbar-toggler background-color:white;"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          style="justify-content: center; text-align: center"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto fw-bold nav-pills">
+            <li class="nav-item">
+              <a class="nav-link fs-5 text-light" id="navbarNav" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 text-light" id="navbarNav" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 text-light" id="navbarNav" href="#product">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 text-light" id="navbarNav" href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 text-light" id="navbarNav" href="#testimoni">Testimonial</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example" data-offset="40" data-bs-smooth-scroll="true">
+      <div class="parallax my-2">
+        <div class="row">
+          <div class="col-6 col-md-12"></div>
+          <div class="col-6 col-md-12"></div>
+        </div>
+      </div>
+
+      <div class="my-5 mt-4" data-spy="scroll" data-target="#navbar-example" data-offset="40" style="margin-top: 50px">
+        <div id="carouselExample" class="carousel slide mt-5 mb-4">
+          <div class="carousel-inner">
+            <div class="carousel-item active"></div>
+          </div>
+        </div>
+        <section class="bg-light py-5 py-xl-8" id="about">
+          <div class="container">
+            <div class="row justify-content-md-center">
+              <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                <h2 class="fs-5 mb-3 text-secondary text-uppercase text-center" style="margin-bottom: 10px">About us</h2>
+                <p class="display-5 my-2 text-center fs-2">Kombinasi Sempurna dari Kesehatan dan Kenikmatan</p>
+                <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
+              </div>
+            </div>
+          </div>
+          <div class="container overflow-hidden about-main">
+            <div class="row gy-4 gy-md-0 gx-xxl-5">
+              <div class="col-12 col-md-6">
+                <div class="card border-0">
+                  <img class="foto" src="assets/about1" alt="" data-aos="fade-in" />
+                </div>
+              </div>
+              <div class="col-12 col-md-6 my-auto" data-aos="fade-in">
+                <div class="about-deskripsi">
+                  <p class="about-desc fs-6" id="about">
+                    UMKM Susu Jeli adalah usaha kecil menengah yang fokus pada produksi minuman susu dengan inovasi jeli sehat. Kami berdedikasi untuk menyediakan produk susu yang tidak hanya lezat, tetapi juga bergizi dan menyegarkan.
+                    Menggunakan bahan-bahan alami dan berkualitas tinggi, kami memastikan setiap produk Susu Jeli aman untuk dikonsumsi. Visi kami adalah menjadi pilihan utama konsumen dalam kategori minuman sehat dan menyegarkan. Susu Jeli
+                    hadir dengan berbagai varian rasa yang menarik, cocok untuk segala usia. Kami percaya bahwa kesehatan adalah kunci, oleh karena itu, setiap produk kami bebas dari bahan pengawet dan pewarna buatan.
+                  </p>
+                  <p class="about-desc fs-6" id="about">
+                    UMKM Susu Jeli tidak hanya peduli dengan kualitas produk, tetapi juga kesejahteraan komunitas sekitar kami. Kami selalu memastikan bahwa setiap produk Susu Jeli dikemas dengan penuh kasih dan perhatian. Dalam setiap
+                    kemasan Susu Jeli, terkandung komitmen kami untuk memberikan yang terbaik bagi konsumen. Kami berterima kasih atas dukungan konsumen yang telah menjadikan UMKM Susu Jeli sebagai bagian dari kehidupan sehari-hari mereka.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="container mt-5" id="galeri">
+          <h2 class="text-center mb-4 mt-5">Galery</h2>
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <div class="polaroid">
+                <img src="image/galeri1.png" alt="Foto 1" />
+                <div class="caption">Foto 1</div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="polaroid">
+                <img src="image/galeri2.png" alt="Foto 2" />
+                <div class="caption">Foto 2</div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="polaroid">
+                <img src="image/galeri4.png" alt="Foto 3" />
+                <div class="caption">Foto 3</div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="polaroid">
+                <img src="image/galeri3.png" alt="Foto 4" />
+                <div class="caption">Foto 4</div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="polaroid">
+                <img src="image/galeri5.png" alt="Foto 5" />
+                <div class="caption">Foto 5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <section id="product">
+          <div class="container mt-5 my-3">
+            <ul class="nav nav-tabs" id="menuTabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="tab1-tab" data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Menu Makanan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tab2-tab" data-bs-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Menu Minuman</a>
+              </li>
+            </ul>
+            <div class="tab-content menu" id="menuTabsContent">
+              <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                <div class="container menu-section mb-2 mt-4">
+                  <h4 style="font-weight: 600">Menu - menu yang tersedia:</h4>
+                  <div class="row mb-4">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <div class="card" data-name="Sujel Vanila" data-price="Rp 10.000" data-desc="Jeli dengan susu rasa vanila" data-image="assets/jeli0.jpg" data-bs-toggle="modal" data-bs-target="#productModal">
+                        <img src="assets/jeli0.jpg" class="card-img-top" alt="Sujel Vanila" />
+                        <div class="card-body">
+                          <h5 class="card-title">Sujel Vanila</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <div class="card" data-name="Sujel Komplit" data-price="Rp 15.000" data-desc="Jeli susu rasa vanila topping boda" data-image="assets/jeli1.jpg" data-bs-toggle="modal" data-bs-target="#productModal">
+                        <img src="assets/jeli1.jpg" class="card-img-top" alt="Sujel Komplit" />
+                        <div class="card-body">
+                          <h5 class="card-title">Sujel Komplit</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <div class="card" data-name="Jeli Cokelat" data-price="Rp 12.000" data-desc="Jeli cokelat dengan susu rasa coklat" data-image="assets/jeli2.jpg" data-bs-toggle="modal" data-bs-target="#productModal">
+                        <img src="assets/jeli2.jpg" class="card-img-top" alt="Jeli Cokelat" />
+                        <div class="card-body">
+                          <h5 class="card-title">Jeli Cokelat</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                <div class="container menu-section mb-2 mt-4">
+                  <h4 style="font-weight: 600">Menu - menu yang tersedia:</h4>
+                  <div class="row mb-4">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <div class="card" data-name="Yogurt 1" data-price="Rp 8.000" data-desc="Yogurt dengan rasa vanilla yang lembut" data-image="assets/yogurt1.jpg" data-bs-toggle="modal" data-bs-target="#productModal">
+                        <img src="assets/yogurt1.jpg" class="card-img-top" alt="Yogurt 1" />
+                        <div class="card-body">
+                          <h5 class="card-title">Yogurt 1</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <div class="card" data-name="Yogurt 2" data-price="Rp 9.000" data-desc="Yogurt dengan rasa stroberi yang segar" data-image="assets/yogurt2.jpg" data-bs-toggle="modal" data-bs-target="#productModal">
+                        <img src="assets/yogurt2.jpg" class="card-img-top" alt="Yogurt 2" />
+                        <div class="card-body">
+                          <h5 class="card-title">Yogurt 2</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <div class="card" data-name="Yogurt 3" data-price="Rp 10.000" data-desc="Yogurt dengan campuran rasa buah tropis" data-image="assets/yogurt3.jpg" data-bs-toggle="modal" data-bs-target="#productModal">
+                        <img src="assets/yogurt3.jpg" class="card-img-top" alt="Yogurt 3" />
+                        <div class="card-body">
+                          <h5 class="card-title">Yogurt 3</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel">Deskripsi Produk</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <!-- <img id="modalProductImage" src="" class="img-fluid mb-3" alt="Product Image" /> -->
+                  <h5 id="modalProductTitle"></h5>
+                  <p id="modalProductPrice"></p>
+                  <p id="modalProductDesc"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-light py-3 py-md-5" id="faq">
+          <div class="container">
+            <div class="row gy-5 gy-lg-0 align-items-center">
+              <div class="FAQ col-12 col-lg-6 d-flex justify-content-center">
+                <img class="img rounded h-50 w-50" loading="lazy" src="assets/faq1" alt="How can we help you?" data-aos="fade-in" style="width: 150px; height: 100px" />
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="row justify-content-xl-end" data-aos="fade-in">
+                  <div class="col-12 col-xl-11">
+                    <h2 class="h1 mb-3">Bagaimana kami bisa membantu mu?</h2>
+                    <p class="lead fs-4 text-secondary mb-5">Kami harap jika kamu memmili pertanyaan , dimohon kamu dapat menanyakan di call center kami atau dapat juga melalui contact lewat email</p>
+                    <div class="accordion accordion-flush" id="accordionExample" style="background-color: gray">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Apa saja produk yang dijual oleh UMKM Mbak G?</button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <p>Kami menjual berbagai macam produk seperti :</p>
+                            <ul>
+                              <li>Jeli susu</li>
+                              <li>Yogurt</li>
+                              <li>salad jeli</li>
+                              <li>kacang goreng</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">How Does Payment System Work?</button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            A payment system is a way to transfer money from one person or organization to another. It is a complex process that involves many different parties, including banks, credit card companies, and merchants.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How Do I Cancel My Account?</button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <p>To cancel your account, please follow these steps:</p>
+                            <ul>
+                              <li>Go to our website and sign in to your account.</li>
+                              <li>Click on your profile picture in the top right corner of the page and select "Account Settings."</li>
+                              <li>Scroll to the bottom of the page and click on "Cancel Account."</li>
+                              <li>Enter your password and click on "Cancel Account."</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-light py-5 py-xl-8" id="testimoni">
+          <div class="container">
+            <div class="row justify-content-md-center">
+              <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                <h2 class="fs-6 text-secondary mb-2 text-uppercase text-center">Happy Customers</h2>
+                <p class="display-5 mb-4 mb-md-5 text-center fs-2">kepuasan klien adalah prioritas kami, mari lihat pendapat para Customers mengenai kami.</p>
+                <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container overflow-hidden">
+            <div class="row gy-4 gy-md-0 gx-xxl-5">
+              <div class="col-12 col-md-4">
+                <div class="card border-0 border-bottom border-primary" data-aos="fade-in">
+                  <div class="card p-4 p-xxl-5">
+                    <figure>
+                      <img class="img-fluid rounded rounded-circle mb-4 border border-5" loading="lazy" src="assets/testi1" alt="Luna John" />
+                      <figcaption>
+                        <div class="bsb-ratings text-warning mb-3" data-bsb-star="5" data-bsb-star-off="0"></div>
+                        <blockquote class="bsb-blockquote-icon mb-4 fs-5">pelayanan sangat cepat, rasa nya segar dan tidak membuat batuk</blockquote>
+                        <h4 class="mb-2">Customer 1</h4>
+                        <!--<h5 class="fs-6 text-secondary mb-0"></h5>-->
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="card border-0 border-bottom border-primary" data-aos="fade-in">
+                  <div class="card p-4 p-xxl-5">
+                    <figure>
+                      <img class="img-fluid rounded rounded-circle mb-4 border border-5" loading="lazy" src="assets/testi1" alt="Mark Smith" />
+                      <figcaption>
+                        <div class="bsb-ratings text-warning mb-3" data-bsb-star="4" data-bsb-star-off="1"></div>
+                        <blockquote class="bsb-blockquote-icon mb-4 fs-4">walaupun murah tetapi rasanya tidak murahan.</blockquote>
+                        <h4 class="mb-2">Customer 2</h4>
+                        <!--<h5 class="fs-6 text-secondary mb-0">God analisyst</h5>-->
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="card border-0 border-bottom border-primary" data-aos="fade-in">
+                  <div class="card p-4 p-xxl-5">
+                    <figure>
+                      <img class="img-fluid rounded rounded-circle mb-4 border border-5" loading="lazy" src="assets/testi1" alt="Luke Reeves" />
+                      <figcaption>
+                        <div class="bsb-ratings text-warning mb-3" data-bsb-star="5" data-bsb-star-off="0"></div>
+                        <blockquote class="bsb-blockquote-icon mb-4 fs-5">brand yang sangat bagus, pengemasan aman dan penjual sangat ramah</blockquote>
+                        <h4 class="mb-2">Customer 3</h4>
+                        <!--<h5 class="fs-6 text-secondary mb-0">alomani</h5>-->
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="row mt-3 mb-4">
+          <div class="col-12 col-md-3"></div>
+          <div class="col-12 col-md-6">
+            <div class="feedback-form mt-4">
+              <form class="fw-bold" id="feedbackFormElement" data-aos="fade-in">
+                <div class="mb-3">
+                  <label for="nama" class="form-label">Nama</label>
+                  <input type="text" class="form-control" id="nama" placeholder="Nama" />
+                </div>
+                <div class="mb-3">
+                  <label for="kritik" class="form-label">Kritik</label>
+                  <textarea class="form-control" id="kritik" rows="3" placeholder="Kritik"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="saran" class="form-label">Saran</label>
+                  <textarea class="form-control" id="saran" rows="3" placeholder="Saran"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="pesan" class="form-label">Pesan</label>
+                  <textarea class="form-control" id="pesan" rows="3" placeholder="Pesan"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Kirim Feedback</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-12 col-md-3"></div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <footer id="footer" class="footer position-relative light-background">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center fs-3" style="text-decoration: none; color: white">
+              <span class="sitename">QuickStart</span>
+            </a>
+
+            <div class="footer-contact pt-3">
+              <p>Jalan Jangli krajan barat III</p>
+              <p>Semarang, 50274</p>
+              <p class="mt-3"><strong>Phone:</strong> <span>+62 000-000-000</span></p>
+              <p><strong>Email:</strong> <span>@gmai.com</span></p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links"></div>
+
+          <div class="col-lg-2 col-md-3 footer-links"></div>
+
+          <div class="col-lg-4 col-md-12 footer-newsletter my-auto">
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d8766.925079314353!2d110.41350367545591!3d-7.027570053745184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMDEnNDQuOCJTIDExMMKwMjUnMzkuOCJF!5e1!3m2!1sen!2sid!4v1721807800851!5m2!1sen!2sid"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="container copyright text-center mt-4">
+        <p>© <span>2024</span><strong class="px-1 sitename">umkm mbak G</strong><span>All rights reserved</span></p>
+        <div class="credits"></div>
+      </div>
+    </footer>
+    <!-- <footer id="footer" class="footer position-relative light-background">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center fs-3" style="text-decoration: none; color: white">
+              <span class="sitename">QuickStart</span>
+            </a>
+
+            <div class="footer-contact pt-3">
+              <p>Jalan Jangli krajan barat III</p>
+              <p>Semarang, 50274</p>
+              <p class="mt-3"><strong>Phone:</strong> <span>+62 000-000-000</span></p>
+              <p><strong>Email:</strong> <span>@gmai.com</span></p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links"></div>
+
+          <div class="col-lg-2 col-md-3 footer-links"></div>
+
+          <div class="col-lg-4 col-md-12 footer-newsletter my-auto">
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d8766.925079314353!2d110.41350367545591!3d-7.027570053745184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMDEnNDQuOCJTIDExMMKwMjUnMzkuOCJF!5e1!3m2!1sen!2sid!4v1721807800851!5m2!1sen!2sid"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="container copyright text-center mt-4">
+        <p>© <span>2024</span><strong class="px-1 sitename">umkm mbak G</strong><span>All rights reserved</span></p>
+        <div class="credits"></div>
+      </div>
+    </footer> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Select all cards
+        const cards = document.querySelectorAll('.card');
+
+        // Add click event listener to each card
+        cards.forEach((card) => {
+          card.addEventListener('click', function () {
+            // Retrieve product data from card attributes
+            const name = this.getAttribute('data-name');
+            const price = this.getAttribute('data-price');
+            const desc = this.getAttribute('data-desc');
+            const image = this.getAttribute('data-image');
+
+            // Set modal content
+            document.getElementById('modalProductTitle').textContent = name;
+            document.getElementById('modalProductPrice').textContent = price;
+            document.getElementById('modalProductDesc').textContent = desc;
+            document.getElementById('modalProductImage').src = image;
+          });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('.nav-link');
+        function onScroll() {
+          let currentSection = '';
+
+          // Loop through each section to determine the one currently in view
+          document.querySelectorAll('section').forEach((section) => {
+            const sectionTop = section.offsetTop - 60; // Adjust based on your navbar height
+            if (window.scrollY >= sectionTop) {
+              currentSection = section.getAttribute('id');
+            }
+          });
+
+          // Remove active class from all nav-links
+          navLinks.forEach((link) => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentSection}`) {
+              link.classList.add('active');
+            }
+          });
+        }
+
+        // Listen for scroll events
+        window.addEventListener('scroll', onScroll);
+      });
+    </script>
+  </body>
+</html>
